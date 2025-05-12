@@ -1141,7 +1141,13 @@ const CompanyForm = ({
         <Label>Handsign</Label>
         <RadioGroup
           className="flex"
-          onValueChange={(value) => setSignatureType(value)}
+          onValueChange={(value) => {
+            setSignatureType(value);
+            clearSignature();
+            if (value === 'create') {
+              handsignFile.file = null;
+            }
+          }}
           value={signatureType}>
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="upload" />

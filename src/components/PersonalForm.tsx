@@ -1075,7 +1075,15 @@ const PersonalForm = ({
         <Label>Handsign</Label>
         <RadioGroup
           className="flex"
-          onValueChange={(value) => setSignatureType(value)}
+          onValueChange={(value) => {
+            setSignatureType(value);
+            if (value === 'upload') {
+              clearSignature();
+            }
+            if (value === 'create') {
+              handsignFile.file = null;
+            }
+          }}
           value={signatureType}>
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="upload" />
