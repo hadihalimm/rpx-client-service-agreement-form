@@ -1,0 +1,107 @@
+const workbook = new Workbook();
+      const res = await axios.get('/form.xlsx', {
+        responseType: 'arraybuffer',
+      });
+      await workbook.xlsx.load(res.data);
+      const worksheet = workbook.getWorksheet('Sheet1');
+      if (!worksheet) {
+        console.error("Worksheet 'Sheet1' not found");
+        return;
+      }
+      worksheet.getCell('J9').value = value.companyName;
+      worksheet.getCell('J10').value = value.address;
+      if (value.city.startsWith('Kab')) {
+        worksheet.getCell('AC11').value = value.city;
+      } else {
+        worksheet.getCell('J12').value = value.city;
+      }
+      worksheet.getCell('AC12').value = value.subDistrict;
+      worksheet.getCell('AC13').value = village?.postal_code;
+      worksheet.getCell('J13').value = value.industry;
+      worksheet.getCell('J14').value = value.siupNumber;
+      worksheet.getCell('J15').value = value.npwpNumber;
+      if (value.npwpType === 'WAPU') {
+        worksheet.getCell('AB15').value = '☑';
+      } else {
+        worksheet.getCell('AF15').value = '☑';
+      }
+      worksheet.getCell('J16').value = value.contactName;
+      worksheet.getCell('J17').value = value.jobTitle;
+      worksheet.getCell('J18').value = value.email;
+      worksheet.getCell('J19').value = value.phone;
+      worksheet.getCell('Y19').value = value.phoneExt;
+      worksheet.getCell('J20').value = value.mobilePhone;
+
+      worksheet.getCell('J23').value = value.billingCompanyName;
+      worksheet.getCell('J24').value = value.billingAddress;
+      worksheet.getCell('J26').value = value.billingCity;
+      worksheet.getCell('AB26').value = billingVillage?.postal_code;
+      worksheet.getCell('J27').value = value.contactName;
+      worksheet.getCell('J28').value = value.billingEmployeeID;
+      worksheet.getCell('J29').value = value.billingJobTitle;
+      worksheet.getCell('J30').value = value.billingEmail;
+      worksheet.getCell('J31').value = value.billingPhone;
+      worksheet.getCell('Y31').value = value.billingPhoneExt;
+      worksheet.getCell('J32').value = value.billingMobilePhone;
+
+      const buffer = await workbook.xlsx.writeBuffer();
+      const sheetFile = new File(
+        [buffer],
+        `${value.companyName}_Service Agreement.xlsx`,
+        {
+          type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        },
+      );
+      saveAs(blob, 'FilledForm.xlsx');
+
+
+const workbook = new ExcelJS.Workbook();
+      const res = await axios.get('/form.xlsx', {
+        responseType: 'arraybuffer',
+      });
+      await workbook.xlsx.load(res.data);
+      const worksheet = workbook.getWorksheet('Sheet1');
+      if (!worksheet) {
+        console.error("Worksheet 'Sheet1' not found");
+        return;
+      }
+      worksheet.getCell('J9').value = value.companyName;
+      worksheet.getCell('J10').value = value.address;
+      if (value.city.startsWith('Kab')) {
+        worksheet.getCell('AC11').value = value.city;
+      } else {
+        worksheet.getCell('J12').value = value.city;
+      }
+      worksheet.getCell('AC12').value = value.subDistrict;
+      worksheet.getCell('AC13').value = village?.postal_code;
+      worksheet.getCell('J13').value = value.industry;
+      worksheet.getCell('AC14').value = value.idNumber;
+
+      worksheet.getCell('J16').value = value.contactName;
+      worksheet.getCell('J17').value = value.jobTitle;
+      worksheet.getCell('J18').value = value.email;
+      worksheet.getCell('J19').value = value.phone;
+      worksheet.getCell('Y19').value = value.phoneExt;
+      worksheet.getCell('J20').value = value.mobilePhone;
+
+      worksheet.getCell('J23').value = value.billingCompanyName;
+      worksheet.getCell('J24').value = value.billingAddress;
+      worksheet.getCell('J26').value = value.billingCity;
+      worksheet.getCell('AB26').value = billingVillage?.postal_code;
+      worksheet.getCell('J27').value = value.contactName;
+      worksheet.getCell('J28').value = value.billingEmployeeID;
+      worksheet.getCell('J29').value = value.billingJobTitle;
+      worksheet.getCell('J30').value = value.billingEmail;
+      worksheet.getCell('J31').value = value.billingPhone;
+      worksheet.getCell('Y31').value = value.billingPhoneExt;
+      worksheet.getCell('J32').value = value.billingMobilePhone;
+
+      const buffer = await workbook.xlsx.writeBuffer();
+      const sheetFile = new File(
+        [buffer],
+        `${value.companyName}_Service Agreement.xlsx`,
+        {
+          type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        },
+      );
+      saveAs(blob, 'FilledForm.xlsx');

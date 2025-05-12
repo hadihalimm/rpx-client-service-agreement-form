@@ -19,33 +19,27 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 
-const frameworks = [
-  {
-    value: 'next.js',
-    label: 'Next.js',
-  },
-  {
-    value: 'sveltekit',
-    label: 'SvelteKit',
-  },
-  {
-    value: 'nuxt.js',
-    label: 'Nuxt.js',
-  },
-  {
-    value: 'remix',
-    label: 'Remix',
-  },
-  {
-    value: 'astro',
-    label: 'Astro',
-  },
-];
+export interface Option {
+  label: string;
+  value: string;
+}
 
-export function Combobox() {
+interface ComboboxProps {
+  options: Option[];
+  value: string;
+  placeholder?: string;
+  onChange: (value: string) => void;
+  className?: string;
+}
+
+export function Combobox({
+  options,
+  value,
+  placeholder,
+  onChange,
+  className,
+}: ComboboxProps) {
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState('');
-
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
@@ -53,32 +47,32 @@ export function Combobox() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between">
+          className={cn('w-full justify-between', className)}>
           {value
-            ? frameworks.find((framework) => framework.value === value)?.label
-            : 'Select framework...'}
+            ? options.find((item) => item.value === value)?.label
+            : placeholder}
           <ChevronsUpDown className="opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
-          <CommandInput placeholder="Search framework..." />
+          <CommandInput placeholder="Search..." />
           <CommandList>
-            <CommandEmpty>No framework found.</CommandEmpty>
+            <CommandEmpty>No data found.</CommandEmpty>
             <CommandGroup>
-              {frameworks.map((framework) => (
+              {options.map((option) => (
                 <CommandItem
-                  key={framework.value}
-                  value={framework.value}
+                  key={option.value}
+                  value={option.value}
                   onSelect={(currentValue) => {
-                    setValue(currentValue === value ? '' : currentValue);
+                    onChange(currentValue === value ? '' : currentValue);
                     setOpen(false);
                   }}>
-                  {framework.label}
+                  {option.label}
                   <Check
                     className={cn(
                       'ml-auto',
-                      value === framework.value ? 'opacity-100' : 'opacity-0',
+                      value === option.value ? 'opacity-100' : 'opacity-0',
                     )}
                   />
                 </CommandItem>
