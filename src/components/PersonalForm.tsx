@@ -158,7 +158,7 @@ const PersonalForm = ({
 
       try {
         const res = await axios.post(
-          'http://localhost:8888/.netlify/functions/upload-to-drive',
+          import.meta.env.VITE_UPLOAD_TO_DRIVE_URL,
           formData,
         );
         if (res.status === 200) {
