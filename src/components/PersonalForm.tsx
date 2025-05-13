@@ -20,6 +20,7 @@ interface PersonalFormProps {
   cities: City[];
   subDistricts: SubDistrict[];
   villages: Village[];
+  sales: Sales[];
 }
 
 const PersonalForm = ({
@@ -27,9 +28,11 @@ const PersonalForm = ({
   cities,
   subDistricts,
   villages,
+  sales,
 }: PersonalFormProps) => {
   const form = useForm({
     defaultValues: {
+      referralCode: '',
       companyName: '',
       address: '',
       province: '',
@@ -74,6 +77,12 @@ const PersonalForm = ({
       }
       setIsSubmitting(true);
 
+      const seller = sales.find((s) => s.salesId === value.referralCode) || {
+        salesName: 'Unknown',
+        salesId: 'Unknown',
+        email: 'Unknown',
+      };
+
       const res = await axios.get('/form.xlsx', {
         responseType: 'arraybuffer',
       });
@@ -83,7 +92,7 @@ const PersonalForm = ({
         console.error("Worksheet 'Sheet1' not found");
         return;
       }
-      // 3. Update ALL cells (your complete mapping)
+      // 3. Update ALL cells
       // --- Company Information ---
       sheet.cell('J9').value(value.companyName);
       sheet.cell('J10').value(value.address);
@@ -120,6 +129,10 @@ const PersonalForm = ({
       sheet.cell('J31').value(value.billingPhone);
       sheet.cell('Y31').value(value.billingPhoneExt);
       sheet.cell('J32').value(value.billingMobilePhone);
+
+      // Sales information
+      sheet.cell('X104').value(seller.salesId);
+      sheet.cell('AH104').value(seller.salesName);
 
       // 4. Generate and download
       const blob = await workbook.outputAsync().then(
@@ -340,6 +353,28 @@ const PersonalForm = ({
         e.preventDefault();
         form.handleSubmit();
       }}>
+      <form.Field
+        name="referralCode"
+        validators={{
+          onChange: z.string(),
+        }}>
+        {(field) => (
+          <div className="space-y-2">
+            <Label>Referral code</Label>
+            <Input
+              type="text"
+              value={field.state.value}
+              onChange={(e) => field.handleChange(e.target.value)}
+            />
+            {!field.state.meta.isValid && (
+              <p className="text-[10px] text-red-500">
+                {field.state.meta.errors.map((err) => err?.message).join(', ')}
+              </p>
+            )}
+          </div>
+        )}
+      </form.Field>
+
       <p className="font-bold text-lg bg-primary w-fit py-1 px-2 rounded-md">
         Personal Information
       </p>
@@ -1100,6 +1135,7 @@ const PersonalForm = ({
               type="file"
               onChange={handsignFile.handleChange}
               onClick={handsignFile.markTouched}
+              accept=".jpg,.jpeg,.png,.pdf"
             />
             {handsignFile.touched && !handsignFile.file && (
               <p className="text-[10px] text-red-500">Handsign is required</p>

@@ -21,6 +21,7 @@ interface CompanyFormProps {
   cities: City[];
   subDistricts: SubDistrict[];
   villages: Village[];
+  sales: Sales[];
 }
 
 const CompanyForm = ({
@@ -28,9 +29,11 @@ const CompanyForm = ({
   cities,
   subDistricts,
   villages,
+  sales,
 }: CompanyFormProps) => {
   const form = useForm({
     defaultValues: {
+      referralCode: '',
       companyName: '',
       address: '',
       province: '',
@@ -62,7 +65,6 @@ const CompanyForm = ({
       billingMobilePhone: '',
     },
     onSubmit: async ({ value }) => {
-      console.log(value);
       if (!siupFile.file || !npwpFile.file) {
         alert('Silahkan upload SIUP dan NPWP');
         return;
@@ -77,6 +79,12 @@ const CompanyForm = ({
       }
       setIsSubmitting(true);
 
+      const seller = sales.find((s) => s.salesId === value.referralCode) || {
+        salesName: 'Unknown',
+        salesId: 'Unknown',
+        email: 'Unknown',
+      };
+
       const res = await axios.get('/form.xlsx', {
         responseType: 'arraybuffer',
       });
@@ -86,7 +94,7 @@ const CompanyForm = ({
         console.error("Worksheet 'Sheet1' not found");
         return;
       }
-      // 3. Update ALL cells (your complete mapping)
+      // 3. Update ALL cells
       // --- Company Information ---
       sheet.cell('J9').value(value.companyName);
       sheet.cell('J10').value(value.address);
@@ -134,6 +142,10 @@ const CompanyForm = ({
       sheet.cell('Y31').value(value.billingPhoneExt);
       sheet.cell('J32').value(value.billingMobilePhone);
 
+      // Sales information
+      sheet.cell('X104').value(seller.salesId);
+      sheet.cell('AH104').value(seller.salesName);
+
       // 4. Generate and download
       const blob = await workbook.outputAsync().then(
         (buffer: any) =>
@@ -178,6 +190,7 @@ const CompanyForm = ({
           alert(
             'Thank you! Your form has been successfully submitted and your files have been uploaded to Google Drive. \n\nRPX - your one-stop logistics solution.',
           );
+          console.log(res.data.folderId);
         } else {
           alert(
             'Submission failed. Please try again. If the issue persists, contact RPX support.',
@@ -341,6 +354,28 @@ const CompanyForm = ({
         e.preventDefault();
         form.handleSubmit();
       }}>
+      <form.Field
+        name="referralCode"
+        validators={{
+          onChange: z.string(),
+        }}>
+        {(field) => (
+          <div className="space-y-2">
+            <Label>Referral code</Label>
+            <Input
+              type="text"
+              value={field.state.value}
+              onChange={(e) => field.handleChange(e.target.value)}
+            />
+            {!field.state.meta.isValid && (
+              <p className="text-[10px] text-red-500">
+                {field.state.meta.errors.map((err) => err?.message).join(', ')}
+              </p>
+            )}
+          </div>
+        )}
+      </form.Field>
+
       <p className="font-bold text-lg bg-primary w-fit py-1 px-2 rounded-md">
         Company Information
       </p>

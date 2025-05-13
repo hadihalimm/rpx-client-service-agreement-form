@@ -13,6 +13,7 @@ function App() {
   const [cities, setCities] = useState<City[]>();
   const [subDistricts, setSubDistricts] = useState<SubDistrict[]>();
   const [villages, setVillages] = useState<Village[]>();
+  const [sales, setSales] = useState<Sales[]>();
   const [formType, setFormType] = useState('');
 
   useEffect(() => {
@@ -26,6 +27,8 @@ function App() {
         setSubDistricts(res.data as SubDistrict[]);
         res = await axios.get('/villages.json');
         setVillages(res.data as Village[]);
+        res = await axios.get('/sales.json');
+        setSales(res.data as Sales[]);
       } catch (err) {
         console.error('Error loading data: ', err);
       }
@@ -82,6 +85,7 @@ function App() {
             cities={cities!}
             subDistricts={subDistricts!}
             villages={villages!}
+            sales={sales!}
           />
         )}
 
@@ -91,6 +95,7 @@ function App() {
             cities={cities!}
             subDistricts={subDistricts!}
             villages={villages!}
+            sales={sales!}
           />
         )}
       </Card>

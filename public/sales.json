@@ -1,0 +1,397 @@
+[
+    {
+        "salesId": "ET1",
+        "salesName": "Geby Alfariza",
+        "email": "galfariza@rpxholding.com"
+    },
+    {
+        "salesId": "ET2",
+        "salesName": "Johannes Silaban",
+        "email": "jsilaban@rpxholding.com"
+    },
+    {
+        "salesId": "ET3",
+        "salesName": "Titin Susanti",
+        "email": "tsusanti@rpxholding.com"
+    },
+    {
+        "salesId": "ET4",
+        "salesName": "Fakhra Nur Sabillah",
+        "email": "fsabillah@rpxholding.com"
+    },
+    {
+        "salesId": "ET5",
+        "salesName": "Gracia Cory",
+        "email": "gcory@rpxholding.com"
+    },
+    {
+        "salesId": "ET6",
+        "salesName": "Athar Naufal Muharam",
+        "email": "amuharam@rpxholding.com"
+    },
+    {
+        "salesId": "ET7",
+        "salesName": "Shinta Berliana Shadani",
+        "email": "sshadani@rpxholding.com"
+    },
+    {
+        "salesId": "ET8",
+        "salesName": "Simrenjit Kaur",
+        "email": "skaur@rpxholding.com"
+    },
+    {
+        "salesId": "ET9",
+        "salesName": "Nabila Saniyya Anggraeni",
+        "email": "nanggraeni@rpxholding.com"
+    },
+    {
+        "salesId": "ET10",
+        "salesName": "Muhammad Ghozy Ihsan",
+        "email": "muhammad.ihsan@rpxholding.com"
+    },
+    {
+        "salesId": "ET11",
+        "salesName": "Lusiana Pawestri",
+        "email": "lpawestri@rpxholding.com"
+    },
+    {
+        "salesId": "ET12",
+        "salesName": "Syarifah Zainah",
+        "email": "szainah@rpxholding.com"
+    },
+    {
+        "salesId": "ET13",
+        "salesName": "Kerenhapukh Emmanuella Grace Wattimena",
+        "email": "kwattimena@rpxholding.com"
+    },
+    {
+        "salesId": "ET14",
+        "salesName": "Armida Nabilaazmi",
+        "email": "anabilaazmi@rpxholding.com"
+    },
+    {
+        "salesId": "AMMOS",
+        "salesName": "Naufal Zuhdi",
+        "email": "nzuhdi@rpxholding.com"
+    },
+    {
+        "salesId": "1-10AM-100-111",
+        "salesName": "Tasya Riestanti",
+        "email": "triestanti@rpxholding.com"
+    },
+    {
+        "salesId": "MOS1",
+        "salesName": "Asita Risqi Wiguno",
+        "email": "awiguno@rpxholding.com"
+    },
+    {
+        "salesId": "MOS2",
+        "salesName": "Tri Aditya Prasetyo",
+        "email": "tprasetyo@rpxholding.com"
+    },
+    {
+        "salesId": "MOS3",
+        "salesName": "Muhamad Jamal",
+        "email": "muhamad.jamal@rpxholding.com"
+    },
+    {
+        "salesId": "MOS4",
+        "salesName": "Dimas Satrio Wicaksono",
+        "email": "dwicaksono@rpxholding.com"
+    },
+    {
+        "salesId": "MOS8",
+        "salesName": "Nurul Iksan",
+        "email": "niksan@rpxholding.com"
+    },
+    {
+        "salesId": "MOS9",
+        "salesName": "Julian Sumarwoto",
+        "email": "jsumarwoto1@rpxholding.com"
+    },
+    {
+        "salesId": "MOS10",
+        "salesName": "Indira Sanubari Sutisno",
+        "email": "isutisno@rpxholding.com"
+    },
+    {
+        "salesId": "MOS11",
+        "salesName": "Julita Azizah Anshori",
+        "email": "janshori@rpxholding.com"
+    },
+    {
+        "salesId": "AMLOG1",
+        "salesName": "Yudianto Putro",
+        "email": "yputro@rpxholding.com"
+    },
+    {
+        "salesId": "AMLOG2",
+        "salesName": "Puspa Ruri Indriani",
+        "email": "pindriani@rpxholding.com"
+    },
+    {
+        "salesId": "MOS8",
+        "salesName": "Nurul Iksan",
+        "email": "niksan@rpxholding.com"
+    },
+    {
+        "salesId": "MOS9",
+        "salesName": "Julian Sumarwoto",
+        "email": "jsumarwoto1@rpxholding.com"
+    },
+    {
+        "salesId": "MOS10",
+        "salesName": "Indira Sanubari Sutisno",
+        "email": "isutisno@rpxholding.com"
+    },
+    {
+        "salesId": "MOS11",
+        "salesName": "Julita Azizah Anshori",
+        "email": "janshori@rpxholding.com"
+    },
+    {
+        "salesId": "AMLOG4",
+        "salesName": "Chusyudi Rusmawan",
+        "email": "crusmawan@rpxholding.com"
+    },
+    {
+        "salesId": "HREX1",
+        "salesName": "Muhammad Eki Zuhrizal",
+        "email": "mzuhrizal@rpxholding.com"
+    },
+    {
+        "salesId": "AMCLEJKT1",
+        "salesName": "Widya Irawati",
+        "email": "wirawati@rpxholding.com"
+    },
+    {
+        "salesId": "AMHCLEJKT1",
+        "salesName": "Farras Shabrine",
+        "email": "fshabrine@rpxholding.com"
+    },
+    {
+        "salesId": "2-TSR-W1",
+        "salesName": "Yulinar Citra Chasanah",
+        "email": "ychasanah@rpxholding.com"
+    },
+    {
+        "salesId": "2-TSR-E1",
+        "salesName": "TSR TBA 2-TSR-E1",
+        "email": "TBA"
+    },
+    {
+        "salesId": "TSRM001",
+        "salesName": "Salsabilla Natasya Firanty",
+        "email": "salsabilla@rpxholding.com"
+    },
+    {
+        "salesId": "TSRM007",
+        "salesName": "Novi Saputri Panjaya",
+        "email": "npanjaya@rpxholding.com "
+    },
+    {
+        "salesId": "TSRM008",
+        "salesName": "Nanda Nabila",
+        "email": "nnabila@rpxholding.com"
+    },
+    {
+        "salesId": "AMBMDPS",
+        "salesName": "Gladys Winy Tambunan",
+        "email": "gtambunan@rpxholding.com"
+    },
+    {
+        "salesId": "AMHDPS1",
+        "salesName": "I Gede Satrya Wibawa Nugraha",
+        "email": "inugraha@rpxholding.com"
+    },
+    {
+        "salesId": "2-10AM-410-923",
+        "salesName": "Gerbinna Fatharanii Renanta",
+        "email": "grenanta@rpxholding.com"
+    },
+    {
+        "salesId": "2-10AM-410-925",
+        "salesName": "Dyah Retno Winarti",
+        "email": "dwinarti@rpxholding.com"
+    },
+    {
+        "salesId": "AMBMUPG",
+        "salesName": "Michael Jamlean",
+        "email": "mjamlean@rpxholding.com"
+    },
+    {
+        "salesId": "2-10AM-450-938",
+        "salesName": "Irwan",
+        "email": "irwan@rpxholding.com"
+    },
+    {
+        "salesId": "AMBMBPN",
+        "salesName": "Irfan Sasmita",
+        "email": "isasmita@rpxholding.com"
+    },
+    {
+        "salesId": "AMHBPN1",
+        "salesName": "Ayulina Pithalona",
+        "email": "apithalona@rpxholding.com"
+    },
+    {
+        "salesId": "2-10AM-430-935",
+        "salesName": "Seiniah",
+        "email": "seiniah@rpxholding.com"
+    },
+    {
+        "salesId": "2-10AM-310-717",
+        "salesName": "Satria Panji Kusuma",
+        "email": "skusuma@rpxholding.com"
+    },
+    {
+        "salesId": "AMBMJOG",
+        "salesName": "Muhamad Lukman Al Hakim",
+        "email": "mhakim1@rpxholding.com"
+    },
+    {
+        "salesId": "2-10AM-310-715",
+        "salesName": "M. Elia Indri Hapsari",
+        "email": "mhapsari@rpxholding.com"
+    },
+    {
+        "salesId": "AMBMSRG",
+        "salesName": "Wildan Wijanarko",
+        "email": "wwijanarko@rpxholding.com"
+    },
+    {
+        "salesId": "2-10AM-310-712",
+        "salesName": "Asta Purnariawanti",
+        "email": "apurnariawanti@rpxholding.com"
+    },
+    {
+        "salesId": "AMBMPLM",
+        "salesName": "Yessy Anggraini",
+        "email": "yanggraini@rpxholding.com"
+    },
+    {
+        "salesId": "2-10AM-240-549",
+        "salesName": "Feriyanto",
+        "email": "feriyanto@rpxholding.com"
+    },
+    {
+        "salesId": "SMRETAIL",
+        "salesName": "Dadang Darmawan",
+        "email": "ddarmawan@rpxholding.com"
+    },
+    {
+        "salesId": "AMMD2",
+        "salesName": "Dewa Raditya Mahendra",
+        "email": "dmahendra@rpxholding.com"
+    },
+    {
+        "salesId": "AMMD3",
+        "salesName": "Tandy Gunawan",
+        "email": "tgunawan@rpxholding.com"
+    },
+    {
+        "salesId": "2-10AM-100-160",
+        "salesName": "Dwi Purnamasari",
+        "email": "dpurnamasari@rpxholding.com"
+    },
+    {
+        "salesId": "AMBMBDO",
+        "salesName": "Edwin Iskandar Siregar",
+        "email": "esiregar@rpxholding.com"
+    },
+    {
+        "salesId": "2-10AM-120-177",
+        "salesName": "Fariz Anshar Pratama",
+        "email": "fpratama@rpxholding.com"
+    },
+    {
+        "salesId": "AMHBTH1",
+        "salesName": "Hendri Widodo",
+        "email": "hendri.widodo@rpxholding.com"
+    },
+    {
+        "salesId": "AMBMMES",
+        "salesName": "Dedi Sanjaya",
+        "email": "dsanjaya@rpxholding.com"
+    },
+    {
+        "salesId": "AMHMES1",
+        "salesName": "Mart Stephanson Manalu",
+        "email": "mmanalu@rpxholding.com"
+    },
+    {
+        "salesId": "AMHMES2",
+        "salesName": "Ikha Dinda Ruhaya",
+        "email": "iruhaya@rpxholding.com"
+    },
+    {
+        "salesId": "AMBMPKU",
+        "salesName": "Indra Budiman",
+        "email": "ibudiman@rpxholding.com"
+    },
+    {
+        "salesId": "AMCOMEAST",
+        "salesName": "Katlia Meilani",
+        "email": "kmeilani@rpxholding.com"
+    },
+    {
+        "salesId": "AMCOME4",
+        "salesName": "Yoki Varisle Damanik",
+        "email": "ydamanik@rpxholding.com"
+    },
+    {
+        "salesId": "MAMCOM2",
+        "salesName": "Davien Satriya Hutama",
+        "email": "dhutama@rpxholding.com"
+    },
+    {
+        "salesId": "2-10AM-100-163",
+        "salesName": "Haris Muda",
+        "email": "hmuda@rpxholding.com"
+    },
+    {
+        "salesId": "AMCOME5",
+        "salesName": "Muhammad Hikamuddin",
+        "email": "mhikamuddin@rpxholding.com"
+    },
+    {
+        "salesId": "DSMASCWSCJKT",
+        "salesName": "Idah Faridah",
+        "email": "ifaridah@rpxholding.com"
+    },
+    {
+        "salesId": "AMMD1",
+        "salesName": "Iwan Setiawan",
+        "email": "isetiawan@rpxholding.com"
+    },
+    {
+        "salesId": "2-10AM-100-157",
+        "salesName": "Cynthia Agustine Efendi",
+        "email": "cefendi@rpxholding.com"
+    },
+    {
+        "salesId": "MAMCOM1",
+        "salesName": "Bayu Teguh Prabowo",
+        "email": "bprabowo@rpxholding.com"
+    },
+    {
+        "salesId": "AMHJKTEAST",
+        "salesName": "Fadli Ibnu Heriza",
+        "email": "fadli.heriza@rpxholding.com"
+    },
+    {
+        "salesId": "SMEAST",
+        "salesName": "Arwiyanto",
+        "email": "arwiyanto@rpxholding.com"
+    },
+    {
+        "salesId": "AMDAPA",
+        "salesName": "Rachdi Satoto",
+        "email": "rsatoto@rpxholding.com"
+    },
+    {
+        "salesId": "1-10AM-100-112",
+        "salesName": "Muhammad Rehan Saputra",
+        "email": "msaputra@rpxholding.com"
+    }
+]

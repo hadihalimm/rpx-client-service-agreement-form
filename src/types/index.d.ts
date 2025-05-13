@@ -18,3 +18,9 @@ interface Village {
   name: string;
   postal_code: string;
 }
+
+interface Sales {
+  salesId: string;
+  salesName: string;
+  email: string;
+}
