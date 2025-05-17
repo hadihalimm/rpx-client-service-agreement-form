@@ -1,54 +1,66 @@
-# React + TypeScript + Vite
+# 📄 Service Agreement Form (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend aplikasi untuk pengisian **form perjanjian layanan (service agreement)**, dibangun dengan React dan Vite. Form ini memungkinkan klien (perorangan atau perusahaan) untuk mengisi data layanan, mengunggah dokumen, dan mengirimkannya ke backend untuk diproses dan disimpan ke Google Drive.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Fitur Utama
 
-## Expanding the ESLint configuration
+- ✅ Form dinamis berdasarkan jenis klien (perorangan/perusahaan)
+- 📄 Autofill data tagihan (nama, alamat, NPWP, dll.)
+- 📥 Autofill isi file Excel berdasarkan input pengguna
+- 📎 Upload file dokumen pendukung (PDF, gambar, dll.)
+- 🧾 Validasi data menggunakan Zod + React Hook Form
+- 🔗 Terintegrasi dengan backend (Netlify Function)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Teknologi yang Digunakan
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- ⚛️ [React](https://reactjs.org/)
+- ⚡ [Vite](https://vitejs.dev/)
+- 🧩 [TanStack Form](https://tanstack.com/form/latest)
+- 🔐 [Zod](https://github.com/colinhacks/zod)
+- 🌐 [Axios](https://axios-http.com/)
+- 💅 [Tailwind CSS](https://tailwindcss.com/)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🚀 Menjalankan Secara Lokal
+
+Untuk menjalankan proyek ini di komputer lokal:
+
+1. **Clone repositori:**
+
+   ```bash
+   git clone https://github.com/hadihalimm/rpx-client-service-agreement-form
+   cd rpx-client-service-agreement-form
+   ```
+
+2. **Install dependensi:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Buat file `.env` di direktori root dan isi seperti ini:**
+
+   ```env
+   VITE_API_BASE_URL=https://your-netlify-function-endpoint.netlify.app/.netlify/functions
+   ```
+
+   Gantilah URL di atas sesuai dengan endpoint Netlify Function atau endpoint server lain.
+
+4. **Jalankan aplikasi:**
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Akses di browser:**
+
+   ```
+   http://localhost:5173
+   ```
+
+---
