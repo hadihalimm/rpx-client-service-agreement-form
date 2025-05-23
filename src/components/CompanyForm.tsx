@@ -1173,7 +1173,7 @@ const CompanyForm = ({
       <Separator />
 
       <div className="space-y-2 flex flex-col">
-        <Label>Handsign</Label>
+        <Label>Signature</Label>
         <RadioGroup
           className="flex"
           onValueChange={(value) => {
